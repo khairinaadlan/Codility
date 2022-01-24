@@ -1,4 +1,7 @@
 function solution (A,K) {
+     if (A.length == 0 | A.length == K) {
+         return A;
+     }
 
      for (let i = 0; i < K; i++) {
          let lastValue = A[A.length - 1]
