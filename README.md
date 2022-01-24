@@ -1,2 +1,2 @@
-# Codility_01
+# Codility
 Repository for codility coding test.
