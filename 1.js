@@ -1,3 +1,5 @@
+// BinaryGap
+
 function solution(N) {
     let bString = N.toString(2);
     let started = false;
