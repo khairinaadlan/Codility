@@ -1,9 +1,6 @@
 // MinAvgTwoSlice
 
 function solution (A) {
-     //  console.log(A)
-     //  let MinAvgTwoSlice = new Set();
-     
      let indexOfMinOf2 = -1;
      let minSumOf2 = Number.MAX_VALUE;
      
