@@ -1,4 +1,4 @@
-// NumberOfDIscIntersections
+// NumberOfDIscIntersections 4
 
 function solution(A) {
 
