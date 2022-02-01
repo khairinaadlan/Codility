@@ -1,40 +1,38 @@
 // Brackets
 
 function solution(S) {
-    stack = new String();
-    console.log(S, stack, S.length)
+    let stack = [];
 
-    for(let i = 0; i < S.length; i++) {
-        let ch = S.substring(i, i + 1);
-        console.log(ch);
-        if(ch == "(" | ch == "[" | ch == "{") {
-            stack = stack.concat(ch);
-            console.log(stack, "m");
+    for (let i = 0; i < S.length; i++) {
+        if ((S[i] == "(") | (S[i] == "[") | (S[i] == "{")) {
+            stack.push(S[i]);
         } else {
-            if (stack === "") {
+            if (stack == []) {
                 return 0;
             }
-            if(ch === ")") {
-                if (stack.pop != "(") {
+            if (S[i] === ")") {
+                if (stack.pop(stack[stack.length - 1]) !== "(") {
                     return 0;
                 }
             }
-            if (ch === "]") {
-                if (stack.pop != "[") {
+            if (S[i] === "]") {
+                if (stack.pop(stack[stack.length - 1]) != "[") {
                     return 0;
                 }
             }
-            if (ch === "}") {
-                if (stack.pop != "{") {
+            if (S[i] === "}") {
+                if (stack.pop(stack[stack.length - 1]) != "{") {
                     return 0;
                 }
             }
         }
     }
-    // if (stack != "") {
-    //     return 0;
-    // }
-    return 1
+    if (stack != "") {
+        return 0;
+    }
+    return 1;
 }
 
-[["{[()()]}"]].forEach(([e]) => console.log(solution(e)));
+[["{[()()]}"], ["([)()]"], [""]].forEach(([e1, e2, e3]) =>
+    console.log(solution(e1, e2, e3))
+);
