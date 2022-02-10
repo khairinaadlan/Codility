@@ -7,8 +7,6 @@ let positions = new Array();
 
 function solution(A) {
     this.A = A
-    // console.log(A);
-    // console.log(this.A);
     target = A.length;
 
     fibNums = new Array();
@@ -23,14 +21,11 @@ function solution(A) {
             break;
         }
     }
-    console.log(fibNums);
-    
 
     let steps = 0;
     positions.push(-1);
 
     while(!positions.length == 0) {
-        console.log("a");
         steps++;
         if (attempJump()) {
             return steps;
@@ -51,8 +46,8 @@ function attempJump() {
             }
 
             if (position + fibNum < target) {
-                if (A[position + fibNum] == 1) {
-                    A[position + fibNum] = 0;                    
+                if (this.A[position + fibNum] == 1) {
+                    this.A[position + fibNum] = 0;                    
                     newPositions.push(position + fibNum);
                 }
             }
