@@ -25,4 +25,4 @@ function solution(A) {
     return r[r.length - 1];
 };
 
-[[[1, -2, 0, 9, -1,-2]]].forEach(([e]) => console.log(solution(e)))
+[[[1, -2, 0, 9, -1, -2]]].forEach(([e]) => console.log(solution(e)))
