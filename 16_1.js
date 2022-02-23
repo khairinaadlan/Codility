@@ -13,4 +13,4 @@ function solution(A, B) {
     return segmentCount;
 }
 
-[[[1, 3, 7, 9, 9] , [5, 6, 8, 9, 10]]].forEach(([e1,e2]) => console.log(solution(e1, e2)))
+[[[1, 3, 7, 9, 9] , [5, 6, 8, 9, 10]]].forEach(([e1,e2]) => console.log(solution(e1, e2)));
